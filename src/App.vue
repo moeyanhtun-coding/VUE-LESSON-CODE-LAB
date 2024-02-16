@@ -3,7 +3,9 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/pageList">Page List</router-link> |
-    <router-link to="/allListPage">Todo Page</router-link>
+    <router-link to="/allListPage">Todo Page</router-link> |
+    <router-link to="/loginPage">LoginPage</router-link> |
+    <router-link to="/homePage">Home Page</router-link>
   </nav>
     <div class="container">
       <router-view/>
