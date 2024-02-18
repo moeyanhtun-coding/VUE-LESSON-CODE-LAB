@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
+    name : "",
     myName : "Moe Yan Htun",
     myFri : [
       "Moe Pyae Hein",
@@ -39,6 +40,8 @@ export default createStore({
   mutations: {
   },
   actions: {
+    changeName: ({ state }) => state.myName = "Moe Yan Update",
+    changeMyName : ({state},value) => state.myName = value
   },
   modules: {
   }
