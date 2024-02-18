@@ -15,7 +15,7 @@ export default createStore({
         name:'Aung Aung',
         job : 'Programmer',
         workingHr : 10,
-        jobDone : false
+        jobDone : true
       },{
         id:2,
         name:'Kyaw Aung',
@@ -27,13 +27,14 @@ export default createStore({
         name:'Aung Myat',
         job : 'Full Stack',
         workingHr : 10,
-        jobDone : false
+        jobDone : true
       },
 
     ]
   },
   getters: {
-    getUserInfo : state => state.userInfo.length,
+    getUserInfo: state => state.userInfo.length,
+    jobDone : state => state.userInfo.filter(x=>x.jobDone === true).length
   },
   mutations: {
   },
