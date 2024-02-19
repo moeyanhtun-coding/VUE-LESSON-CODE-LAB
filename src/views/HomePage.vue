@@ -19,6 +19,12 @@
       <button class="btn btn-dark" @click="changeInputName()">Enter</button>
     </div>
     <p class="text-success">{{ $store.state.myName }}</p>
+    <button class="btn btn-secondary" @click="changeNameMutation()">
+      Mutation
+    </button>
+    <button class="btn btn-warning ms-3" @click="changeNameMutationValue()">
+      Mutation with value
+    </button>
   </div>
 </template>
 
@@ -42,6 +48,15 @@ export default {
     changeInputName() {
       this.$store.dispatch("changeMyName", this.myName);
       this.myName = "";
+    },
+    changeNameMutation() {
+      this.$store.commit("changeWithMutation");
+    },
+    changeNameMutationValue() {
+      this.$store.commit(
+        "changeWithMutationValue",
+        "Moe Yan Mutation Change Value"
+      );
     },
   },
   //   computed: mapState({ getMyName: (state) => state.myName }),

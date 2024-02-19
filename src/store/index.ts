@@ -38,6 +38,8 @@ export default createStore({
     jobDone : state => state.userInfo.filter(x=>x.jobDone === true).length
   },
   mutations: {
+    changeWithMutation: state => state.myName = "Mutation Moe Yan",
+    changeWithMutationValue : (state , value) => state.myName = value
   },
   actions: {
     changeName: ({ state }) => state.myName = "Moe Yan Update",
